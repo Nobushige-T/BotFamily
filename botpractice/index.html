@@ -2,18 +2,54 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Caveat rel=stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="main.js"></script>
     <title>Vueを試すページ</title>
 </head>
 <body>
-<div id="app">
-    <!-- testValの内容を表示 -->
-    {{ testVal }}
-</div>
-<div id="app-2">
-    {{ message }}
-</div>
-<input type="button" value="bot page" onclick="document.location='bot.html';">
+    <div class="header" id="header">
+        <h2 class="logo">Vue Practice</h2>
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-menu-btn">
+            <i class="far fa-compass"></i>
+        </label>
+        <ul class="menu">
+            <a href="./index.html">Home</a>
+            <a href="#">Profile</a>
+            <a href="./bot.html">Productions</a>
+            <a href="#">Hobby</a>
+            <a href="https://www.marv.jp/special/game/runefactory4SP/" target="_blank">Favorite</a>
+            <label for="chk" class="hide-menu-btn">
+                <i class="fas fa-times"></i>
+            </label>
+        </ul>
+    </div>
+    <div class="main">  
+        <div class="contents">
+            <div id="background">
+                <img src="images/bg.jpg" alt="bg">
+                <div id="app-1">
+                    {{ index1 }}
+                </div>
+                <div id="app-2">
+                        {{ index2 }}
+                </div>
+            </div>  
+            <div id="app-3">
+                {{ message }}
+            </div>
+        </div>
+        <input type="button" id="button" value="bot page" onclick="document.location='bot.html';">
+        <p id="PageTopBtn">
+            <label for="chk2" class="top">
+                <i class="fas fa-arrow-circle-up fa-3x"></i>
+            </label>
+        </p>
+    </div>
 </body>
-<script src="main.js"></script>
+<script src="vuemain.js"></script>
 </html>

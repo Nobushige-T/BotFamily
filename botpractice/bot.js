@@ -135,7 +135,14 @@
                 showMessage(answer);
                 break;
             case langArray[23]:
-                var answer = '覚えている言語は';
+                var array = [];
+                for (let i = 0; i < langArray.length - 1; i++) {
+                    array[i] = langArray[i];
+                    if (i % 4 == 0) {
+                        array[i] += "\n";
+                    }
+                }
+                var answer = '覚えている言語は' + array + "だよ！";
                 showMessage(answer);
                 break;    
             default:
@@ -179,5 +186,6 @@
         //    photo: './images/avatar3.png',
             content: '今日はありがとう！またね！'
         })
+        setTimeout('location.href="./index.html"',4000);
     }
 })();
